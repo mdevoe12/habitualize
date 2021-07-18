@@ -1,15 +1,31 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <Welcome :name="username"/>
+
+  <input type="checkbox" v-model="workout"/>
+  <label>Workout</label>
+  <button @click="clearData">Clear Data</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Welcome from './components/Welcome.vue'
 
 export default {
+  data() {
+    return {
+      username: 'Matt',
+      workout: false
+    }
+  },
   name: 'App',
   components: {
-    HelloWorld
+    Welcome
+  },
+  methods: {
+    clearData() {
+      this.workout=false
+    }
   }
 }
 </script>
