@@ -1,4 +1,5 @@
 # habitualize
+Form those good habits.
 
 ## Project setup
 ```
